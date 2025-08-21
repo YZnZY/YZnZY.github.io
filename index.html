@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhen Yu & Yan Zhang - Save the Date</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="save-the-date-text">Save the Date</div>
+                <div class="couple-names">
+                    <span class="name">Zhen Yu</span>
+                    <span class="ampersand">&</span>
+                    <span class="name">Yan Zhang</span>
+                </div>
+                <div class="wedding-details">
+                    <div class="date">August 22, 2026</div>
+                    <div class="location">Menlo Park, California</div>
+                </div>
+
+            </div>
+            <div class="hero-button">
+                <button class="scroll-button" onclick="scrollToForm()">
+                    <span>Let us know you're interested</span>
+                    <div class="scroll-arrow">↓</div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section" id="form-section">
+        <!-- Photo Display Area -->
+        <div class="form-photo"></div>
+        
+        <!-- Form Container Area -->
+        <div class="form-container-area">
+            <div class="form-content">
+                <div class="form-header">
+                    <h2>We'd love to hear from you</h2>
+                    <p>Please share your contact information so we can send you the wedding invitation next year.</p>
+                </div>
+                
+                <!-- Google Form Embed Container -->
+                <div class="form-container">
+                    <div class="form-placeholder">
+                        <p>📝 Google Form will be embedded here</p>
+                        <p class="form-note">You'll need to create a Google Form and replace this section with the embed code.</p>
+                        
+                        <!-- Temporary form for demonstration -->
+                        <form class="temp-form">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <button type="submit" class="submit-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
