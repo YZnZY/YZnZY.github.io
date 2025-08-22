@@ -43,34 +43,42 @@
                     <p>We'll email the wedding invitation next year.</p>
                 </div>
                 
-                <!-- Custom Form that submits to Google Form -->
-                <div class="form-container">
-                    <form class="wedding-form" id="weddingForm" action="https://docs.google.com/forms/d/e/1FAIpQLSeC2IlLY8zZmeeBAP4ZpMINGb9wuBxWC-WO4eJIlt_fZ4kB0Q/formResponse" method="POST" target="hidden_iframe">
-                        <div class="form-group">
-                            <label for="fullname">Full Name</label>
-                            <input type="text" id="fullname" name="entry.211269846" required placeholder="Enter your full name">
+                                        <!-- Custom Form that submits to Google Form -->
+                        <div class="form-container">
+                            <form class="wedding-form" id="weddingForm" action="https://docs.google.com/forms/d/e/1FAIpQLSeC2IlLY8zZmeeBAP4ZpMINGb9wuBxWC-WO4eJIlt_fZ4kB0Q/formResponse" method="POST" target="hidden_iframe">
+                                <div class="form-group">
+                                    <label for="fullname">Full Name</label>
+                                    <input type="text" id="fullname" name="entry.621660132" required placeholder="Enter your full name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="entry.583731797" required placeholder="Enter your email address">
+                                </div>
+                                <!-- Required hidden fields for Google Forms -->
+                                <input type="hidden" name="fvv" value="1">
+                                <input type="hidden" name="fbzx" value="3589309449955404382">
+                                <input type="hidden" name="partialResponse" value="[null,null,&quot;3589309449955404382&quot;]">
+                                <input type="hidden" name="pageHistory" value="0">
+                                <input type="hidden" name="submissionTimestamp" value="">
+                                <button type="submit" class="submit-btn">
+                                    <span class="btn-text">Submit</span>
+                                    <span class="btn-loading" style="display: none;">Sending...</span>
+                                </button>
+                            </form>
+                            
+                            <!-- Success message -->
+                            <div class="success-message" id="successMessage" style="display: none;">
+                                <div class="success-content">
+                                    <div class="success-icon">✨</div>
+                                    <h3>Thank you!</h3>
+                                    <p>We've received your information and will send you the wedding invitation next year.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Hidden iframe for form submission -->
+                            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="entry.1400893989" required placeholder="Enter your email address">
-                        </div>
-                        <button type="submit" class="submit-btn">
-                            <span class="btn-text">Submit</span>
-                            <span class="btn-loading" style="display: none;">Sending...</span>
-                        </button>
-                    </form>
-                    
-                    <!-- Success message -->
-                    <div class="success-message" id="successMessage" style="display: none;">
-                        <div class="success-content">
-                            <div class="success-icon">✨</div>
-                            <h3>Thank you!</h3>
-                            <p>We've received your information and will send you the wedding invitation next year.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Hidden iframe for form submission -->
-                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
                 </div>
         </div>
     </section>
