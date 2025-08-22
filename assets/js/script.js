@@ -42,12 +42,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Handle form submission (temporary form)
-    const tempForm = document.querySelector('.temp-form');
-    if (tempForm) {
-        tempForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('This is a demo form. Please replace with your Google Form embed code.');
+    // Handle custom wedding form submission
+    const weddingForm = document.getElementById('weddingForm');
+    const successMessage = document.getElementById('successMessage');
+    
+    if (weddingForm) {
+        weddingForm.addEventListener('submit', function(e) {
+            // Show loading state
+            const btnText = document.querySelector('.btn-text');
+            const btnLoading = document.querySelector('.btn-loading');
+            
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline';
+            
+            // Hide form and show success message after a delay
+            setTimeout(() => {
+                weddingForm.style.display = 'none';
+                successMessage.style.display = 'block';
+            }, 1500);
         });
     }
 

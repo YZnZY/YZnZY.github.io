@@ -38,38 +38,41 @@
 
     <!-- Form Section -->
     <section class="form-section" id="form-section">
-        <!-- Photo Display Area -->
-        <div class="form-photo"></div>
-        
-        <!-- Form Container Area -->
-        <div class="form-container-area">
-            <div class="form-content">
+        <div class="form-content">
                 <div class="form-header">
                     <h2>We'd love to hear from you</h2>
-                    <p>Please share your contact information so we can send you the wedding invitation next year.</p>
+                    <p>We'll email the wedding invitation next year.</p>
                 </div>
                 
-                <!-- Google Form Embed Container -->
+                <!-- Custom Form that submits to Google Form -->
                 <div class="form-container">
-                    <div class="form-placeholder">
-                        <p>📝 Google Form will be embedded here</p>
-                        <p class="form-note">You'll need to create a Google Form and replace this section with the embed code.</p>
-                        
-                        <!-- Temporary form for demonstration -->
-                        <form class="temp-form">
-                            <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <button type="submit" class="submit-btn">Submit</button>
-                        </form>
+                    <form class="wedding-form" id="weddingForm" action="https://docs.google.com/forms/d/e/1FAIpQLSeC2IlLY8zZmeeBAP4ZpMINGb9wuBxWC-WO4eJIlt_fZ4kB0Q/formResponse" method="POST" target="hidden_iframe">
+                        <div class="form-group">
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="fullname" name="entry.2005620554" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="entry.1045781291" required placeholder="Enter your email address">
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Submit</span>
+                            <span class="btn-loading" style="display: none;">Sending...</span>
+                        </button>
+                    </form>
+                    
+                    <!-- Success message -->
+                    <div class="success-message" id="successMessage" style="display: none;">
+                        <div class="success-content">
+                            <div class="success-icon">✨</div>
+                            <h3>Thank you!</h3>
+                            <p>We've received your information and will send you the wedding invitation next year.</p>
+                        </div>
                     </div>
+                    
+                    <!-- Hidden iframe for form submission -->
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
                 </div>
-            </div>
         </div>
     </section>
 
